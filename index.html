@@ -6,7 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pepcoding</title>
 </head>
+<style>
+.container{max-width:500px;margin:auto;position: relative;}
+.background{
+    background:green;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    /* border: solid 1px #000; */
+    box-shadow:inset 0px 0px 0px 1px #000;
+    transition: all ease-in 0.5s;
+}
+.content{
+    padding: 20px;
+    color: #fff;
+}
+.triangle{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #fff;
+    transform: rotate(45deg);
+    /* border:solid 1px red; */
+    box-shadow:inset 0px 0px 0px 1px #000;
+}
+.triangle:nth-child(1){
+    left:-10px;
+    top: -10px;
+}
+.triangle:nth-child(2){
+    top:-10px;
+    right: -10px;
+}
+.triangle:nth-child(3){
+    bottom:-10px;
+    right: -10px;
+    transition: all ease-in 0.5s;
+    
+}
+.triangle:nth-child(4){
+    bottom:-10px;
+    left: -10px;
+}
+.shadow{
+    background-color: #000;
+    position: absolute;
+    top:10px;
+    left:10px;
+    z-index: 1;
+    height: 100%;
+    opacity: 0;
+}
+.shadow .triangle{
+    background-color: #fff;
+}
+.background:hover{
+    background-color:coral;
+}
+.background:hover ~ .shadow{
+    opacity: 1;
+}
+.background:hover .triangle:nth-child(3){
+    background-color: #000;
+}
+</style>
 <body>
-    <h1>This is a test website to using git</h1>
+ 
+<div class="container">
+    <div class="background">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia illum provident culpa ea inventore dicta accusantium recusandae nemo doloremque velit repellat quibusdam, quasi beatae, vero laudantium modi nam, molestias ex.
+        </div>
+    </div>
+    <div class="background shadow">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+       
+    </div>
+</div>
 </body>
 </html>
