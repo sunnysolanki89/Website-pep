@@ -53,16 +53,20 @@ let cap = {
 
 
 // For in loop for objects
-// for(let key in cap){
-//     console.log('key:', key, "Value:", cap[key])
-// }
+for(let key in cap){
+    if(key=== "firstName"){
+    console.log('key:', key, "Value:", cap[key])
+    }
+}
 
-// Add
+// Change
 cap.isAvanger = false;
 
+// Add
 cap.movies = ['Age of Ultron', 'Civil War', 'First Avenger']
 
+// Delete
 delete cap.age
 
-console.log(cap)
+//console.log(cap)
 
