@@ -13,4 +13,4 @@ const cp = require('child_process');
 // console.log('vs code open')
 
 let output = cp.execSync("node test.js");
-console.log('Output is'+ output);
+console.log('Output is'+ output);``
